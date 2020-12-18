@@ -1,0 +1,24 @@
+Resources:
+    mySecurityGroup:
+      Type: AWS::EC2::SecurityGroup
+      Properties: 
+        GroupDescription: "CFN Security Group"
+        GroupName: "CFN-SG"
+        SecurityGroupIngress: 
+          - IpProtocol: tcp
+            FromPort: 80
+            ToPort: 80
+            CidrIp: 0.0.0.0/0
+          - IpProtocol: tcp
+            FromPort: 22
+            ToPort: 22
+            CidrIp: 0.0.0.0/0
+        VpcId: vpc-58b62f20
+    Ec2Instance: 
+      Type: AWS::EC2::Instance
+      Properties: 
+        ImageId: ami-04d29b6f966df1537
+        KeyName: citrix-test
+        InstanceType: t2.micro
+        SecurityGroupIds: 
+          - !Ref mySecurityGroup
