@@ -22,3 +22,12 @@ Resources:
         InstanceType: t2.micro
         SecurityGroupIds: 
           - !Ref mySecurityGroup
+    S3Bucket:
+      Type: AWS::S3::Bucket
+      Properties: 
+        BucketName: testbucket9234983948
+        PublicAccessBlockConfiguration: 
+          BlockPublicAcls: false
+          BlockPublicPolicy: false
+          IgnorePublicAcls: false
+          RestrictPublicBuckets: false
