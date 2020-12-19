@@ -24,6 +24,7 @@ Resources:
           - !Ref mySecurityGroup
     S3Bucket:
       Type: AWS::S3::Bucket
+      AccessControl: PublicRead
       Properties: 
         BucketName: testbucket9234983948
         PublicAccessBlockConfiguration: 
