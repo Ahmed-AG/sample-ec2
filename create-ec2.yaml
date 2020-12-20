@@ -31,3 +31,10 @@ Resources:
           BlockPublicPolicy: false
           IgnorePublicAcls: false
           RestrictPublicBuckets: false
+Outputs:
+  PublicIp:
+    Value:
+      'Fn::GetAtt':
+        - Ec2Instance
+        - PublicIp
+    Description: Instance's PublicIp Address
