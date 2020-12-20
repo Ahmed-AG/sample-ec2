@@ -17,7 +17,7 @@ Resources:
     Ec2Instance: 
       Type: AWS::EC2::Instance
       Properties: 
-        ImageId: ami-0885b1f6bd170450c 
+        ImageId: ami-0dc3c22d98a6a91ff 
         KeyName: citrix-test
         InstanceType: t2.micro
         SecurityGroupIds: 
